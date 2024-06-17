@@ -1,7 +1,7 @@
 let button = document.querySelector(".button");
 let californiaMessage = document.querySelector(".california");
 let illinoisMessage = document.querySelector(".illinois");
-let newyorkMessage = document.querySelector(".new-york");
+let newYorkMessage = document.querySelector(".new-york");
 let other = document.querySelector(".other");
 
 button.addEventListener("click", function() {
@@ -9,15 +9,19 @@ button.addEventListener("click", function() {
 
     // CODE ALONG
     // 1. Write an if statement that would display the california message if a user says they're from "California".
-    
+    if (state === 'California'){
+        californiaMessage.style.display = 'block';
+    } else if (state === 'Illinois'){
+        illinoisMessage.style.display ='block';
+    } else if (state === 'New York'){
+        newYorkMessage.style.display ='block';
+    } else {
+        other.style.display = 'block';
+    }
     // CODE SOLO
     // 2. Write an else if statement that would display the illinois message if a user says they're from "Illinois".
-    
-    // 3. Write an else if statement that would display the new york message if a user says they're from "New York".
-    
+    // 3. Write an else if statement that would display the new york message if a user says they're from "New York".   
     // 4. Write an else statement that displays the other message if the user types in a different state.
-
-
 });
 
 // Finished early? 
